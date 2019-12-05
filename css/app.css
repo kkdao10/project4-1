@@ -1,0 +1,447 @@
+
+
+
+
+
+
+body, html
+{
+  height: 10000px;
+  background-color:  #A3D6F5;
+/*  background-image: url("../images/background.png"); */
+
+
+
+  }
+
+
+
+
+
+
+/* https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp ~ change background image when scrolling */
+
+
+  .img1 { background-image: url("../images/backgroundforest.jpeg"); }
+  .img2 { background-image: url("../images/backgroundisland.jpeg"); }
+  .img3 { background-image: url("../images/backgroundlake.jpeg"); }
+  .img4 { background-image: url("../images/backgroundtree.jpg"); }
+  .img5 { background-image: url("../images/backgroundreflection.jpeg"); }
+  .img6 { background-image: url("../images/backgroundbrainstorm.jpg"); }
+  .img7 { background-image: url("../images/backgroundcode.jpeg"); }
+  .img8 { background-image: url("../images/backgroundprototype.jpeg"); }
+
+
+.img1 {
+  /*margin-top: 155px; */
+  padding-top: 20px;
+}
+
+
+  .bg-image {
+    /* Full height */
+    /*height: 5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-size: cover;
+     object-fit: cover; */
+
+
+     position:relative;
+     height: 10%;
+       opacity:0.70;
+       background-position:center;
+       background-size:cover;
+       background-repeat:no-repeat;
+
+       /*
+         fixed = parallax
+         scroll = normal
+       */
+    /*   background-attachment:fixed; */
+
+
+
+  }
+
+
+
+* {
+  box-sizing: border-box;
+  }
+
+
+.imagetext {
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+
+.border{
+  background-color:#111;
+  color:#fff;
+  padding:20px;
+}
+
+
+.border.trans{
+  background-color:transparent;
+}
+
+
+
+
+#header {
+  background-color: #CEEBFB;
+  padding: 10px 10px;
+  color: black;
+  text-align: center;
+  font-size: 90px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+
+
+ul{
+  font-size: 30px;
+  float: right;
+  overflow: hidden;
+  display: inline;
+}
+
+h2
+{
+  font-size: 40px;
+color: white;
+}
+
+
+
+  #sectionbox-1
+    {
+      border: 3px solid green;
+      /*margin-top: 100px; */
+      position:relative;
+      height:500px;
+      width:100%;
+      /*background:white; */
+      /* background-image: url("/images/wave.jpg") */
+      background-color: grey;
+
+      animation: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+  opacity: 0.5;
+
+    }
+
+/*#firstslide:hover <--- block section will move up and down when the mouse is hovering
+  {
+    top:10px;
+  } 8/
+*/
+
+.box1
+{
+  position: relative;
+  height: 300px;
+  width: 500px;
+  border: 2px solid black;
+  overflow: hidden:
+
+}
+/*
+.box1:hover #firstslide
+{
+  top:45px;
+  left:40px;
+  opacity: 1;
+  background-color: white;
+}
+ */
+
+
+
+
+    #sectionbox-2
+    {
+      border:3px solid blue;
+      position: relative;
+      height:500px;
+      width:100%;
+      opacity:1.0px;
+      background-color:grey;
+      /*background-image: url("/images/smoke.jpeg")*/
+
+
+      animation: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      opacity: 0.5;
+    }
+
+    #sectionbox-3
+    {
+      border:3px solid red;
+      position: relative;
+      height: 600px;
+      width: auto;
+      margin: 25px 0;
+      opacity: 0;
+      color: red;
+      transition: all 1s ease;
+      background-color: grey;
+      opacity: 0.5;
+    }
+
+
+ /* figured out this move div element left from https://www.html.am/html-codes/marquees/css-slide-in-text.cfm */
+    #slideinleft
+    {
+      width:500px;
+      height:500px;
+      position:absolute;
+      overflow:hidden;
+      border:2px solid black;
+      animation: 10s slideinleft;
+    }
+
+  @keyframes slideinleft
+  {
+    from {
+      margin-left: -100%;
+
+    }
+    to {
+      margin-left: 0%;
+
+    }
+  }
+
+
+
+    #slideinright
+    {
+      width:500px;
+      height:500px;
+      margin-top: 50%;
+      position:absolute;
+      overflow:hidden;
+      border:2px solid black;
+      animation: 10s slideinleft;
+    }
+
+    @keyframes slideinright
+    {
+        from {
+              margin-right: 100%;
+            }
+    to   {
+          margin-left: 0%;
+          }
+    }
+
+
+
+  .object
+  {
+    border:3px solid red;
+    position: relative;
+    height: 600px;
+    width: auto;
+    margin: 25px 0;
+    opacity: 0;
+    color: red;
+    transition: all 1s ease;
+  }
+
+
+  .object.shift
+  {
+    opacity: 1;
+    left:0;
+    transition: all 1s ease;
+  }
+
+
+    item
+    {
+      width: 200px;
+      height: 200px;
+      margin: 50px auto;
+      padding-top: 75px;
+      background: black;
+      text-align: center;
+      color: #FFF;
+      font-size: 3em;
+      border: 1px solid black;
+      }
+
+
+
+.floating
+{
+  animation: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+
+
+@keyframes floating
+  {
+      from { transform: translate(0,0px;)}
+      65% {transform:translate(0,20px);}
+      to {transform:translate(0,=0px);}
+  }
+
+
+.inline-photo
+{
+  border:1em solid #fff;
+  border-bottom: 4em solid #fff;
+  border-radius: .25em;
+  /*box-shadow: 1em 1em 2em */
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+      opacity .3s .25s ease-out;
+    max-width: 600px;
+    width: 350px;
+    will-change: transform, opacity;
+}
+.inline-photo.is-visible
+{
+  opacity:1;
+  transform: rotateZ(-2deg);
+}
+
+img
+{
+  top:600px;
+  max-width:500px;
+  max-height:500px;
+}
+
+
+/*#counter
+  {
+    border: 1px solid red;
+    height:80px;
+    width:80px;
+    color:white;
+    background:red;
+    position: absolute;
+    top: 200px;
+    transform: rotate(20deg);
+   /* right:125px; */
+   /* transition: all 1s linear; */
+  }
+/*#counter::before{
+  position:relative absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 80px;
+  transform: rotate(135deg);
+} */
+
+
+
+.box
+{
+  width:800px;
+  height:800px;
+  background-color:#aaaa80;
+
+
+}
+
+
+#footer
+{
+  padding-top: 80px;
+}
+
+
+
+
+
+
+
+/*referenced from  https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp */
+
+/* Create a sticky/fixed navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 50px 10px; /* Large padding which will shrink on scroll (using JS) */
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  z-index: 99;
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+
+/* Links on mouse-over */
+#navbar a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  background-color: lightblue;
+  color: white;
+}
+
+/* Display some links to the right */
+#navbar-right {
+  float: right;
+  font-size: 30px;
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
