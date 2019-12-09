@@ -16,6 +16,15 @@ body, html
 
 
 
+/* got the referene from here animated moving text https://tobiasahlin.com/moving-letters/#3 */
+  .ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+
+
+
+
 
 
 
@@ -24,12 +33,13 @@ body, html
 
   .img1 { background-image: url("../images/backgroundforest.jpeg"); }
   .img2 { background-image: url("../images/backgroundisland.jpeg"); }
-  .img3 { background-image: url("../images/backgroundlake.jpeg"); }
-  .img4 { background-image: url("../images/backgroundtree.jpg"); }
-  .img5 { background-image: url("../images/backgroundreflection.jpeg"); }
-  .img6 { background-image: url("../images/backgroundbrainstorm.jpg"); }
-  .img7 { background-image: url("../images/backgroundcode.jpeg"); }
-  .img8 { background-image: url("../images/backgroundprototype.jpeg"); }
+  .img3 { background-image: url("../images/backgroundwaves.jpeg"); }
+  .img4 { background-image: url("../images/backgroundlake.jpeg"); }
+  .img5 { background-image: url("../images/backgroundtree.jpg"); }
+  .img6 { background-image: url("../images/backgroundreflection.jpeg"); }
+  .img7 { background-image: url("../images/backgroundbrainstorm.jpg"); }
+  .img8 { background-image: url("../images/backgroundcode.jpeg"); }
+  .img9 { background-image: url("../images/backgroundprototype.jpeg");}
 
 
 .img1 {
@@ -38,16 +48,8 @@ body, html
 }
 
 
-  .bg-image {
-    /* Full height */
-    /*height: 5%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-     background-size: cover;
-     object-fit: cover; */
-
-
+  .bg-image
+   {
      position:relative;
      height: 10%;
        opacity:0.70;
@@ -60,7 +62,6 @@ body, html
          scroll = normal
        */
     /*   background-attachment:fixed; */
-
 
 
   }
@@ -109,6 +110,18 @@ body, html
   width: 100%;
   transition: 0.2s;
 }
+
+
+ #title {
+  text-align: center;
+  }
+
+
+
+
+
+
+
 
 
 ul{
@@ -171,6 +184,17 @@ color: white;
  */
 
 
+ .box
+           {
+
+               width:200px;
+               height:200px;
+               background-color:	#6495ED;
+               margin:100px auto;
+               text-align: center;
+
+           }
+
 
 
     #sectionbox-2
@@ -215,6 +239,7 @@ color: white;
       overflow:hidden;
       border:2px solid black;
       animation: 10s slideinleft;
+      animation-play-state: paused;
     }
 
   @keyframes slideinleft
@@ -245,12 +270,14 @@ color: white;
     @keyframes slideinright
     {
         from {
-              margin-right: 100%;
+              margin-right: -100%;
             }
     to   {
           margin-left: 0%;
           }
     }
+
+
 
 
 
@@ -313,7 +340,7 @@ color: white;
 .inline-photo
 {
   border:1em solid #fff;
-  border-bottom: 4em solid #fff;
+  border-bottom: 1.8em solid #fff;
   border-radius: .25em;
   /*box-shadow: 1em 1em 2em */
   transform: translateY(4em) rotateZ(-5deg);
@@ -329,6 +356,9 @@ color: white;
   transform: rotateZ(-2deg);
 }
 
+
+
+
 img
 {
   top:600px;
@@ -337,18 +367,19 @@ img
 }
 
 
-/*#counter
+#counter
   {
     border: 1px solid red;
-    height:80px;
-    width:80px;
+    height:100px;
+    width:100px;
     color:white;
-    background:red;
+    background:grey;
     position: absolute;
-    top: 200px;
-    transform: rotate(20deg);
-   /* right:125px; */
-   /* transition: all 1s linear; */
+    right: 10px;
+    top: 180px;
+    transform: rotate(90deg);
+
+    /*transition: all 1s linear; */
   }
 /*#counter::before{
   position:relative absolute;
@@ -361,20 +392,17 @@ img
 
 
 
-.box
-{
-  width:800px;
-  height:800px;
-  background-color:#aaaa80;
 
 
-}
-
-
-#footer
-{
-  padding-top: 80px;
-}
+#footer {
+       position: absolute;
+       left: 0;
+       bottom: auto;
+       width: 100%;
+       background-color: #CEEBFB;
+       color: white;
+       text-align: center;
+    }
 
 
 
@@ -429,19 +457,4 @@ img
   display: block;
   padding: 8px;
   background-color: #dddddd;
-}
-
-/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
-@media screen and (max-width: 580px) {
-  #navbar {
-    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
-  }
-  #navbar a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  #navbar-right {
-    float: none;
-  }
 }
