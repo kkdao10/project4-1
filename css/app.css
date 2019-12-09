@@ -231,21 +231,21 @@ color: white;
 
 
  /* figured out this move div element left from https://www.html.am/html-codes/marquees/css-slide-in-text.cfm */
-    #slideinleft
-    {
+    #slideinleft{
       width:500px;
-      height:500px;
+      height:400px;
+      margin-top: 50%;
       position:absolute;
       overflow:hidden;
       border:2px solid black;
       animation: 10s slideinleft;
-      animation-play-state: paused;
+  /*    animation-play-state: paused; */
     }
 
   @keyframes slideinleft
   {
     from {
-      margin-left: -100%;
+      margin-left: 100%;
 
     }
     to {
@@ -259,24 +259,23 @@ color: white;
     #slideinright
     {
       width:500px;
-      height:500px;
-      margin-top: 50%;
+      height:400px;
+      margin-top:5%;
       position:absolute;
       overflow:hidden;
       border:2px solid black;
-      animation: 10s slideinleft;
+      animation: 10s slideinright;
     }
 
     @keyframes slideinright
     {
         from {
-              margin-right: -100%;
+              margin-left: 100%;
             }
     to   {
-          margin-left: 0%;
+          margin-left: : 0%;
           }
     }
-
 
 
 
